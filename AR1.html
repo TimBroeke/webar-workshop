@@ -105,7 +105,22 @@
     <a-entity camera></a-entity>
 
   </a-scene>
+  <!-- [OPDRACHT 2] Script: knoppen veranderen de kleur -->
+  <script>
+    // Haal de knoppen en het 3D-object op via hun id (hun 'huisnummer')
+    const stap2Kubus = document.getElementById("stap2-kubus");
+    const btnGroen   = document.getElementById("btn-groen");
+    const btnRood    = document.getElementById("btn-rood");
 
+    // ALS op de GROEN-knop wordt geklikt, DAN... (de kleur veranderen)
+    btnGroen.addEventListener("click", function() {
+      stap2Kubus.setAttribute("color", "#00ff00");
+    });
+  
+    btnRood.addEventListener("click", function() {
+      stap2Kubus.setAttribute("color", "#ff0000");
+    });
+  </script>
   <!-- ================================================================= -->
   <!-- SCRIPT: hier komt later de logica van de knoppen (STAP 2) en       -->
   <!-- de MQTT-verbinding (STAP 3 t/m 6). In dit beginbestand is er       -->
